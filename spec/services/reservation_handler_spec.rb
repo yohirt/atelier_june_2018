@@ -18,7 +18,7 @@ RSpec.describe ReservationsHandler, type: :service do
       }
     end
 
-    context "with available book " do
+    context "with available book" do
       let(:can_be_reserved) { true }
     end
   end

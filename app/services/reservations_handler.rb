@@ -26,11 +26,11 @@ class ReservationsHandler
     end
   end
 
-  private
-
-  attr_reader :user, :book
-
   def cancel_reservation
     book.reservations.where(user: user, status: "RESERVED").order(created_at: :asc).first.update_attributes(status: "CANCELED")
   end
+
+  private
+
+  attr_reader :user, :book
 end
